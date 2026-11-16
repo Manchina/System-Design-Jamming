@@ -1,0 +1,23 @@
+{
+  "name": "@system-design/06-realtime-streaming",
+  "version": "1.0.0",
+  "description": "Chapters 11 & 12: Real-Time SSE Token Streaming & WebSockets with Redis Pub/Sub Fanout",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fastify/websocket": "^11.0.2",
+    "@system-design/shared": "*",
+    "fastify": "^5.2.1",
+    "ioredis": "^5.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

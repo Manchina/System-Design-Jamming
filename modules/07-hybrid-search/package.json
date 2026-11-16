@@ -1,0 +1,23 @@
+{
+  "name": "@system-design/07-hybrid-search",
+  "version": "1.0.0",
+  "description": "Chapter 13: PostgreSQL pgvector & BM25 Full-Text Hybrid Search with Reciprocal Rank Fusion",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@system-design/shared": "*",
+    "pg": "^8.13.3",
+    "pgvector": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "@types/pg": "^8.11.11",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

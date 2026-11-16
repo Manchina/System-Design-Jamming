@@ -1,0 +1,22 @@
+{
+  "name": "@system-design/04-url-shortener",
+  "version": "1.0.0",
+  "description": "Chapter 8: High-Performance Base62 URL Shortener with Postgres & Redis Hot Cache",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@system-design/shared": "*",
+    "fastify": "^5.2.1",
+    "ioredis": "^5.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

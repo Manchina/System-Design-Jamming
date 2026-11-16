@@ -1,0 +1,24 @@
+{
+  "name": "@system-design/ch01-scale-zero-to-millions",
+  "version": "1.0.0",
+  "description": "Chapter 1: Stateless Fastify Architecture, Cache-Aside Redis, and DB Primary/Replica Routing",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/server.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@system-design/shared": "*",
+    "fastify": "^5.2.1",
+    "ioredis": "^5.6.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

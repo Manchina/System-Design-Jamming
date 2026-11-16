@@ -1,0 +1,22 @@
+{
+  "name": "@system-design/05-async-queues-crawler",
+  "version": "1.0.0",
+  "description": "Chapters 9 & 10: Asynchronous BullMQ Worker Pool, Deduplication, Exponential Backoff & DLQ",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@system-design/shared": "*",
+    "bullmq": "^5.41.4",
+    "ioredis": "^5.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

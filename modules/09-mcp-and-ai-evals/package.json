@@ -1,0 +1,22 @@
+{
+  "name": "@system-design/09-mcp-and-ai-evals",
+  "version": "1.0.0",
+  "description": "Production TypeScript MCP Server with Zod Guardrails & LLM Eval Harness",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.0",
+    "@system-design/shared": "*",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

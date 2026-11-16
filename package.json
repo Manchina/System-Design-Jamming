@@ -1,0 +1,45 @@
+{
+  "name": "system-design-jamming",
+  "version": "1.0.0",
+  "description": "Production-grade distributed systems monorepo based on Alex Xu System Design Interview Vol. 1",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "modules/00-catchup-foundations/*",
+    "modules/*"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "docker:up": "docker compose -f infra/docker-compose.yml up -d",
+    "docker:down": "docker compose -f infra/docker-compose.yml down",
+    "docker:ps": "docker compose -f infra/docker-compose.yml ps",
+    "estimate": "npm run --workspace=@system-design/ch02-back-of-envelope-calc estimate",
+    "bench:memory": "npm run --workspace=@system-design/ch02-back-of-envelope-calc bench:memory",
+    "start:rate-limiter": "npm run --workspace=@system-design/ch04-rate-limiter start",
+    "bench:rate-limiter": "npm run --workspace=@system-design/ch04-rate-limiter bench:autocannon",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/autocannon": "^7.12.7",
+    "@types/node": "^22.13.4",
+    "autocannon": "^8.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  },
+  "keywords": [
+    "system-design",
+    "distributed-systems",
+    "fastify",
+    "redis",
+    "rate-limiter",
+    "snowflake",
+    "consistent-hashing",
+    "alex-xu"
+  ],
+  "author": "Manchina",
+  "license": "MIT"
+}

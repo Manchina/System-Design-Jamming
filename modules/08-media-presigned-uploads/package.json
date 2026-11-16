@@ -1,0 +1,23 @@
+{
+  "name": "@system-design/08-media-presigned-uploads",
+  "version": "1.0.0",
+  "description": "Chapters 14 & 15: Direct MinIO/S3 Presigned Media Uploads & Asynchronous Webhook Pipeline",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.750.0",
+    "@aws-sdk/s3-request-presigner": "^3.750.0",
+    "@system-design/shared": "*",
+    "fastify": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@system-design/ch03-design-template",
+  "version": "1.0.0",
+  "description": "Chapter 3: Production System Design RFC Template and Empirical Autocannon Benchmark Harness",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@system-design/shared": "*",
+    "autocannon": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

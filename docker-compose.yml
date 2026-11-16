@@ -1,0 +1,4 @@
+# Root docker-compose configuration
+# Delegates directly to infra/docker-compose.yml
+include:
+  - infra/docker-compose.yml

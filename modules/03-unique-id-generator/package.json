@@ -1,0 +1,21 @@
+{
+  "name": "@system-design/03-unique-id-generator",
+  "version": "1.0.0",
+  "description": "Chapter 7: 64-bit Snowflake Unique ID Generator Service & Benchmarks",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@system-design/shared": "*",
+    "fastify": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}
