@@ -101,13 +101,24 @@ describe("Chapter 4: Atomic Redis Rate Limiter", () => {
   });
 
   it("should inject X-RateLimit headers and return 429 with Retry-After in Fastify", async () => {
+    let testRedis = redis;
     if (!isRedisAvailable) {
-      return;
+      // Provide an in-memory eval mock so Fastify route handling and headers are tested without Docker
+      let requestCount = 0;
+      testRedis = {
+        eval: async (_script: string, _numKeys: number, _key: string, limit: number) => {
+          requestCount++;
+          if (requestCount <= limit) {
+            return [1, limit - requestCount, 0];
+          }
+          return [0, 0, 5000]; // blocked, 5s reset
+        },
+      } as unknown as Redis;
     }
 
     const app = Fastify();
     await app.register(rateLimiterPlugin, {
-      redis,
+      redis: testRedis,
       algorithm: "sliding-window",
       limit: 2,
       windowMs: 10000,
